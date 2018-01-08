@@ -10,8 +10,8 @@ import java.util.List;
 @NamedQueries(value =
         {
                 @NamedQuery(name = "Rating.getAll", query = "SELECT o FROM ratings o"),
-                @NamedQuery(name = "Rating.findByTitle", query = "SELECT o FROM ratings o WHERE o.name = " +
-                        ":name")
+                @NamedQuery(name = "Rating.findByTitle", query = "SELECT o FROM ratings o WHERE o.productId = " +
+                        ":productId")
         })
 @UuidGenerator(name = "idGenerator")
 public class Rating {

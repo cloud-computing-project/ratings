@@ -10,7 +10,7 @@ spec:
         app: rating
     spec:
       containers:
-      - image: ejmric/ratings:first
+      - image: ejmric/ratings:latest
         name: ratings
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
@@ -22,7 +22,7 @@ spec:
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
             value: jdbc:postgresql://postgres-ratings:5432/rating
           - name: KUMULUZEE_SERVER_BASEURL
-            value: http://169.51.20.118:30188
+            value: http://169.51.20.118:31421
         ports:
         - containerPort: 8085
           name: server

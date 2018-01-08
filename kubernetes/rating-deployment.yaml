@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ratings-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rating
+    spec:
+      containers:
+      - image: ejmric/ratings:first
+        name: ratings
+        env:
+          - name: KUMULUZEE_DISCOVERY_CLUSTER
+            value: bluemix
+          - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
+            value: http://etcd:2379
+          - name: KUMULUZEE_CONFIG_ETCD_HOSTS
+            value: http://etcd:2379
+          - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
+            value: jdbc:postgresql://postgres-ratings:5432/rating
+          - name: KUMULUZEE_SERVER_BASEURL
+            value: http://169.51.20.118:30188
+        ports:
+        - containerPort: 8085
+          name: server
+          protocol: TCP

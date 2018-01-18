@@ -4,9 +4,9 @@ kumuluzee:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8085
+    base-url: http://localhost:8088
     http:
-      port: 8085
+      port: 8088
   datasources:
     - jndi-name: jdbc/RatingsDS
       connection-url: jdbc:postgresql://192.168.99.100:5433/rating

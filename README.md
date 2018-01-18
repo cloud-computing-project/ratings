@@ -9,7 +9,7 @@ docker run -d --name ratings -e POSTGRES_USER=dbuser -e POSTGRES_PASSWORD=postgr
 ## Run application in Docker
 
 ```bash
-docker run -p 8085:8085 ejmric/ratings
+docker run -p 8088:8088 ejmric/ratings
 ```
 
 ## Travis status 

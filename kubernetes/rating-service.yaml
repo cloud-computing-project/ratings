@@ -5,8 +5,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8085
+  - port: 8088
     protocol: TCP
-    targetPort: 8085
+    targetPort: 8088
   selector:
     app: rating

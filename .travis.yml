@@ -14,7 +14,7 @@ cache:
   - $HOME/.m2
 
 env:
-  - DOCKER_IMAGE=ejmric/ratings:latest1
+  - DOCKER_IMAGE=ejmric/ratings:etcd
 
 script:
   - mvn clean package -U

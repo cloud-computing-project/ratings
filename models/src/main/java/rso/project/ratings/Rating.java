@@ -20,6 +20,7 @@ public class Rating {
     @GeneratedValue(generator = "idGenerator")
     private String id;
 
+    @Column(name = "product_id")
     private String productId;
 
     private String rating;
@@ -40,5 +41,20 @@ public class Rating {
 
     public void setDescription(String description){this.rating = rating;}
 
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
 
 }
